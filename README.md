@@ -1,2 +1,7 @@
-# Project_3_second-shelf
-Second-Shelf is a community marketplace for discovering, listing, and reviewing used books.
+# Second-Shelf
+
+## Author
+Allison Avery, David Ahn
+
+## Class Link
+[Add your class link here]
