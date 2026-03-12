@@ -1,14 +1,14 @@
 # Second-Shelf
 
 ## Author
-Alison Avery, David Ahn
+
+David Ahn, Alison Avery
 
 ## Class Link
+
 [Add your class link here]
 
-
-
-``` 
+```
 second-shelf/
   backend/
     config/
@@ -80,4 +80,5 @@ second-shelf/
   .prettierrc
   LICENSE
   README.md
-  ```
+  ``'
+```
