@@ -1,12 +1,14 @@
 # Second-Shelf
 
-## Author
+## Author 
 
 David Ahn, Alison Avery
 
 ## Class Link
 
 [Add your class link here]
+
+## Demo
 
 ```
 second-shelf/
