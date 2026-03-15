@@ -1,0 +1,159 @@
+/* BookDetails.css
+   Styles for the full book listing detail page (/books/:id).
+   Covers the back link, the main listing card, meta badges,
+   owner action buttons, and the reviews section heading. 
+   ReviewList and ReviewForm have their own CSS files. */
+
+/* Shared loading / error / not-found status message */
+.bookdetails__status {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+}
+
+/* Error variant — red text to draw attention to the failure */
+.bookdetails__status--error {
+  color: #c0392b;
+}
+
+/* Back navigation link above the card */
+.bookdetails__back {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  color: #5a3e2b;
+}
+
+/* Main listing info card — white background with soft brown border */
+.bookdetails__card {
+  background: #fff;
+  border: 1px solid #e0d6cc;
+  border-radius: 8px;
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Book title — large and prominent at the top of the card */
+.bookdetails__title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #2c2c2c;
+  margin-bottom: 0.25rem;
+}
+
+/* Author byline — muted grey, sits directly below the title */
+.bookdetails__author {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Meta row — price, condition badge, and average rating side by side */
+.bookdetails__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap; /* Wraps on narrow screens */
+  margin-bottom: 1rem;
+}
+
+/* Price — large and bold in the branded brown */
+.bookdetails__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #5a3e2b;
+}
+
+/* Condition badge — pill shape; colour driven by modifier class */
+.bookdetails__condition {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* Colour-coded condition modifiers — must match BookCard.css */
+.bookdetails__condition--like-new { background: #d4edda; color: #155724; } /* Green  */
+.bookdetails__condition--good     { background: #cce5ff; color: #004085; } /* Blue   */
+.bookdetails__condition--fair     { background: #fff3cd; color: #856404; } /* Yellow */
+.bookdetails__condition--poor     { background: #f8d7da; color: #721c24; } /* Red    */
+
+/* Average rating badge — gold star and score from reviews */
+.bookdetails__rating {
+  color: #e6a817;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Seller description — readable line height for longer text */
+.bookdetails__description {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+}
+
+/* Owner action row — Edit and Delete buttons side by side */
+.bookdetails__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+/* Base button/link style shared by Edit and Delete */
+.bookdetails__btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+}
+
+/* Edit button — solid brown fill */
+.bookdetails__btn--edit {
+  background: #5a3e2b;
+  color: #fff;
+}
+
+.bookdetails__btn--edit:hover {
+  background: #7a5540;
+  text-decoration: none;
+}
+
+/* Delete button — ghost style with red border; fills red on hover */
+.bookdetails__btn--delete {
+  background: #fff;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+}
+
+.bookdetails__btn--delete:hover {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* Reviews section heading */
+.bookdetails__reviews-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #2c2c2c;
+}
+
+/* Prompt shown to unauthenticated users in place of the ReviewForm */
+.bookdetails__login-prompt {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Inline "Log in" text button inside the prompt */
+.bookdetails__login-link {
+  background: none;
+  border: none;
+  color: #5a3e2b;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  padding: 0;
+}

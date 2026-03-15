@@ -1,0 +1,33 @@
+/* AddBook.css
+   Styles for the Add / Edit book listing page.
+   Covers the page heading, subheading, and status messages.
+   The form itself is styled in BookForm.css. */
+
+/* Page heading — large and bold in the branded brown */
+.addbook__heading {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #5a3e2b;
+  margin-bottom: 0.4rem;
+}
+
+/* Supporting description below the heading — muted grey */
+.addbook__subheading {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Message shown when a user tries to access the page without being logged in */
+.addbook__auth-msg {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+}
+
+/* Loading indicator shown while fetching an existing listing in edit mode */
+.addbook__status {
+  text-align: center;
+  margin-top: 3rem;
+  color: #666;
+}

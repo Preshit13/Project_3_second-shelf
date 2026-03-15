@@ -1,0 +1,62 @@
+/* Header.css
+   Styles for the site-wide sticky navigation bar.
+   Sits at the top of every page above the main content area. */
+
+/* Main header bar — dark brown background, flex layout to space logo and nav */
+.header {
+  background-color: #5a3e2b;
+  color: #fff;
+  padding: 0.875rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100; /* Sits above all page content including modals' backdrops */
+}
+
+/* Site logo text link — large and bold, white to stand out on the dark bar */
+.header__logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Nav link and button group — horizontally spaced with a gap */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Nav links use a slightly muted off-white to visually separate from the logo */
+.header__nav a {
+  color: #f0e6da;
+  font-size: 0.95rem;
+}
+
+.header__nav a:hover {
+  color: #fff;
+}
+
+/* Logged-in username display — same muted off-white as nav links */
+.header__username {
+  font-size: 0.9rem;
+  color: #f0e6da;
+}
+
+/* Log In / Log Out button — inverted colours (light background, dark text) */
+.header__btn {
+  background: #f0e6da;
+  color: #5a3e2b;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.header__btn:hover {
+  background: #fff;
+}

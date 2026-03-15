@@ -1,0 +1,58 @@
+/* BookForm.css
+   Styles for the add/edit book listing form.
+   Fields are stacked vertically using flex.
+   Used on both the AddBook page and the edit route. */
+
+/* Constrain form width so it doesn't stretch too wide on large screens */
+.book-form {
+  max-width: 520px;
+}
+
+/* Inline client-side validation error shown above the fields */
+.book-form__error {
+  color: #c0392b;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Vertically stacked field group — label sits directly above its input */
+.book-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Field labels — slightly smaller than body text, bold for readability */
+.book-form__fields label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
+/* Shared styles for all input types — text, number, select, and textarea */
+.book-form__fields input,
+.book-form__fields select,
+.book-form__fields textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit; /* Prevent textarea from falling back to a monospace font */
+  width: 100%;
+}
+
+/* Submit button — full width, dark brown, consistent with the site style */
+.book-form__submit {
+  margin-top: 0.75rem;
+  background: #5a3e2b;
+  color: #fff;
+  border: none;
+  padding: 0.65rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.book-form__submit:hover {
+  background: #7a5540;
+}

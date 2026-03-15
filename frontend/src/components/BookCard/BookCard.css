@@ -1,0 +1,87 @@
+/* BookCard.css
+   Styles for the compact book listing tile shown in the Home page grid.
+   Cards stack vertically inside using flex to push the footer (price + button)
+   to the bottom regardless of how much content is in the info section. */
+
+/* Card container — white background with a subtle brown border */
+.book-card {
+  background: #fff;
+  border: 1px solid #e0d6cc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes footer to the bottom of the card */
+  gap: 0.75rem;
+  transition: box-shadow 0.2s;
+}
+
+/* Lift effect on hover to signal the card is clickable */
+.book-card:hover {
+  box-shadow: 0 4px 12px rgba(90, 62, 43, 0.12);
+}
+
+/* Book title — dark text; the nested <a> inherits and overrides on hover */
+.book-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.book-card__title a {
+  color: #2c2c2c;
+}
+
+.book-card__title a:hover {
+  color: #5a3e2b;
+}
+
+/* Author line — muted grey, smaller than the title */
+.book-card__author {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+/* Condition badge — pill shape; background and text colour vary by modifier class below */
+.book-card__condition {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* Colour-coded condition modifiers */
+.book-card__condition--like-new { background: #d4edda; color: #155724; } /* Green  */
+.book-card__condition--good     { background: #cce5ff; color: #004085; } /* Blue   */
+.book-card__condition--fair     { background: #fff3cd; color: #856404; } /* Yellow */
+.book-card__condition--poor     { background: #f8d7da; color: #721c24; } /* Red    */
+
+/* Footer row — price on the left, View button on the right */
+.book-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Price — large and bold, branded brown */
+.book-card__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5a3e2b;
+}
+
+/* View button — styled as a filled brown pill link */
+.book-card__btn {
+  background: #5a3e2b;
+  color: #fff;
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.book-card__btn:hover {
+  background: #7a5540;
+  text-decoration: none;
+}
