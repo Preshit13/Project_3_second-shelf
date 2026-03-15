@@ -1,0 +1,51 @@
+.site-header {
+  background-color: #1f2937;
+  padding: 1rem 2rem;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  text-decoration: underline;
+}
+
+.navbar-links button {
+  border: none;
+  background-color: #ef4444;
+  color: white;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.navbar-links button:hover {
+  background-color: #dc2626;
+}
+
+.welcome-text {
+  color: #d1d5db;
+}

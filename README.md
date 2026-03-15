@@ -1,12 +1,14 @@
 # Second-Shelf
 
-## Author
+## Author 
 
 David Ahn, Alison Avery
 
 ## Class Link
 
 [(https://johnguerra.co/classes/webDevelopment_online_spring_2026/)]
+
+## Demo
 
 ```
 second-shelf/

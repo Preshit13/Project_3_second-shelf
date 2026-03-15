@@ -1,35 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router";
+import { fetchCurrentUser, logoutUser } from "./api/auth.js";
+import Header from "./components/Header/Header.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Register from "./pages/Register/Register.jsx";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function loadUser() {
+      try {
+        const data = await fetchCurrentUser();
+        setUser(data.user || null);
+      } catch (error) {
+        console.error(error);
+        setUser(null);
+      }
+    }
+
+    loadUser();
+  }, []);
+
+  async function handleLogout() {
+    try {
+      await logoutUser();
+      setUser(null);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function handleLogin(userData) {
+    setUser(userData);
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <BrowserRouter>
+      <Header user={user} onLogout={handleLogout} />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login onLogin={handleLogin} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

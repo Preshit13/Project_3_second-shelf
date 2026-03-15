@@ -1,37 +1,33 @@
-let users = [
-  {
-    id: "1763666945288",
-    email: "john@example.com",
-    passwordHash:
-      "$2b$10$Nvh.4Ceur1t3O4i2At6MreGsViVJgu6SWx/GaRrRGrm7OG7gj1YLK",
-    name: "john",
-  },
-  {
-    id: "1772955746941",
-    email: "david@example.com",
-    passwordHash:
-      "$2b$10$Hh8bjw3qLmorelmSUfJiVurc2yLbciDHbXsvIx9fb.FFw1fsdJnDW",
-    name: "David Ahn",
-  },
-];
+import bcrypt from "bcrypt";
 
-export const createUser = (user) => {
-  const newUser = {
-    id: Date.now().toString(),
-    ...user,
+let users = [];
+
+// Create user
+export async function createUser({ name, email, password }) {
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  const user = {
+    id: crypto.randomUUID(),
+    name,
+    email,
+    passwordHash,
   };
-  users.push(newUser);
-  return newUser;
-};
 
+  users.push(user);
+  return user;
+}
+
+// Find user by email
 export const findUserByEmail = (email) => {
-  return users.find((user) => user.email === email);
+  return users.find((u) => u.email === email);
 };
 
+// Find user by id
 export const findUserById = (id) => {
-  return users.find((user) => user.id === id);
+  return users.find((u) => u.id === id);
 };
 
+// Get all user
 export const getAllUsers = () => {
   return users;
 };
