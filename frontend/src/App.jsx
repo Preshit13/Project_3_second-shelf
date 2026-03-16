@@ -5,6 +5,8 @@ import Header from "./components/Header/Header.jsx";
 import Home from "./pages/Home/Home.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Register from "./pages/Register/Register.jsx";
+import BookDetails from "./pages/BookDetails/BookDetails.jsx";
+import AddBook from "./pages/AddBook/AddBook.jsx";
 import "./App.css";
 
 function App() {
@@ -45,6 +47,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
+        <Route path="/books/:id" element={<BookDetails user={user} />} />
+        <Route path="/add" element={<AddBook user={user} />} />
+        <Route path="/edit/:id" element={<AddBook user={user} />} />
       </Routes>
     </BrowserRouter>
   );
