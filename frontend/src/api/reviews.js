@@ -1,7 +1,6 @@
 ///api/reviews.js//
 const BASE = "/api/reviews";
 
-// const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/reviews`;
 /**
  * Fetches all reviews for a specific book.
  * @param {string} bookId - The book's MongoDB _id
@@ -9,7 +8,7 @@ const BASE = "/api/reviews";
  */
 export async function fetchReviewsByBookId(bookId) {
   const response = await fetch(`${BASE}/book/${bookId}`, {
-    credentials: "include"
+    credentials: "include",
   });
 
   const data = await response.json();
@@ -31,10 +30,10 @@ export async function createReview(reviewData) {
   const response = await fetch(BASE, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     credentials: "include",
-    body: JSON.stringify(reviewData)
+    body: JSON.stringify(reviewData),
   });
 
   const data = await response.json();
@@ -57,10 +56,10 @@ export async function updateReview(id, reviewData) {
   const response = await fetch(`${BASE}/${id}`, {
     method: "PUT",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
     credentials: "include",
-    body: JSON.stringify(reviewData)
+    body: JSON.stringify(reviewData),
   });
 
   const data = await response.json();
@@ -81,7 +80,7 @@ export async function updateReview(id, reviewData) {
 export async function deleteReview(id) {
   const response = await fetch(`${BASE}/${id}`, {
     method: "DELETE",
-    credentials: "include"
+    credentials: "include",
   });
 
   const data = await response.json();

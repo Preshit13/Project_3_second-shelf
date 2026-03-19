@@ -13,29 +13,12 @@ function Footer() {
             </p>
           </div>
 
-          {/* Navigation */}
-          {/* <div className="col-6 col-md-3">
-            <h4 className="footer-heading">Navigation</h4>
-            <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/register">Register</a></li>
-            </ul>
-          </div> */}
-
           {/* Authors */}
           <div className="col-6 col-md-3">
             <h4 className="footer-heading">Authors</h4>
             <p className="footer-text">Allison Avery</p>
             <p className="footer-text">David Ahn</p>
           </div>
-
-          {/* Project */}
-          {/* <div className="col-12 col-md-3">
-            <h4 className="footer-heading">Project</h4>
-            <p className="footer-text">CS 5610 Web Development</p>
-            <p className="footer-text">Northeastern University</p>
-          </div> */}
         </div>
 
         <div className="footer-bottom text-center mt-4 pt-3 border-top">

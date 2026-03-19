@@ -1,7 +1,6 @@
 ////api/books.js//
 const BASE = "/api/books";
 
-// const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/books`;
 /**
  * Fetches all book listings from the database.
  * @returns {Promise<Array>} Array of book objects
@@ -12,10 +11,9 @@ export async function fetchBooks() {
   return res.json();
 }
 
-
 export async function fetchMyBooks() {
   const res = await fetch("/api/books/mine/listings", {
-    credentials: "include"
+    credentials: "include",
   });
 
   const data = await res.json();
