@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch server.js",
-    "start": "node server.js",
+    "start": "node --watch server.js",
     "seed": "node scripts/seed.js",
     "lint": "eslint .",
     "format": "prettier --write ."
@@ -42,3 +41,4 @@
     "prettier": "^3.6.2"
   }
 }
+
