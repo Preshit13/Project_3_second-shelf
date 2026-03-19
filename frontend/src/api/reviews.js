@@ -1,7 +1,7 @@
 ///api/reviews.js//
-// const BASE = "/api/reviews";
+const BASE = "/api/reviews";
 
-const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/reviews`;
+// const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/reviews`;
 /**
  * Fetches all reviews for a specific book.
  * @param {string} bookId - The book's MongoDB _id
