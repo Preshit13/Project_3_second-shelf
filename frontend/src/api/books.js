@@ -1,6 +1,7 @@
 ////api/books.js//
-const BASE = "/api/books";
+// const BASE = "/api/books";
 
+const BASE = `${import.meta.env.VITE_API_BASE_URL}/api/books`;
 /**
  * Fetches all book listings from the database.
  * @returns {Promise<Array>} Array of book objects
