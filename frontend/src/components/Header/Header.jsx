@@ -8,7 +8,7 @@ function Header({ user, onLogout }) {
       <nav className="navbar navbar-expand-lg site-navbar">
         <div className="container">
           <Link className="navbar-brand site-navbar__brand" to="/">
-            <h1>Second-Shelf</h1>
+            Second-Shelf
           </Link>
 
           <button
@@ -36,24 +36,38 @@ function Header({ user, onLogout }) {
                 </NavLink>
               </li>
 
-              {user ? (
-                <li className="nav-item">
-                  <NavLink
-                    to="/add"
-                    className={({ isActive }) =>
-                      `nav-link site-navbar__link${isActive ? " active" : ""}`
-                    }
-                  >
-                    Sell a Book
-                  </NavLink>
-                </li>
-              ) : null}
+              {user && (
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      to="/add"
+                      className={({ isActive }) =>
+                        `nav-link site-navbar__link${isActive ? " active" : ""}`
+                      }
+                    >
+                      Sell a Book
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item">
+                    <NavLink
+                      to="/my-listings"
+                      className={({ isActive }) =>
+                        `nav-link site-navbar__link${isActive ? " active" : ""}`
+                      }
+                    >
+                      My Listings
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
 
             <div className="d-flex align-items-center gap-2">
               {user ? (
                 <>
                   <span className="site-navbar__welcome">Hi, {user.name}</span>
+
                   <button
                     type="button"
                     className="btn btn-danger btn-sm"
@@ -72,6 +86,7 @@ function Header({ user, onLogout }) {
                   >
                     Register
                   </NavLink>
+
                   <NavLink
                     to="/login"
                     className={({ isActive }) =>

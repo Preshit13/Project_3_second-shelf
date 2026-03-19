@@ -208,7 +208,7 @@ export default function BookDetails({ user }) {
       </div>
 
       {reviewsAvailable ? (
-        <section className="bookdetails__reviews">
+        <section className="bookdetails__reviews" >
           <h2 className="bookdetails__reviews-heading">
             Community Reviews {reviews.length > 0 ? `(${reviews.length})` : ""}
           </h2>
@@ -242,6 +242,7 @@ export default function BookDetails({ user }) {
                 </p>
               )}
             </>
+            
           )}
         </section>
       ) : null}

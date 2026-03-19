@@ -11,6 +11,21 @@ export async function fetchBooks() {
   return res.json();
 }
 
+
+export async function fetchMyBooks() {
+  const res = await fetch("/api/books/mine/listings", {
+    credentials: "include"
+  });
+
+  const data = await res.json();
+
+  if (!res.ok) {
+    throw new Error(data.error || "Failed to fetch your listings");
+  }
+
+  return data;
+}
+
 /**
  * Fetches a single book listing by its MongoDB _id.
  * @param {string} id - The book's _id

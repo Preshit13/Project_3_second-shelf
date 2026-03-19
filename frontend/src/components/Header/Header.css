@@ -3,38 +3,40 @@
   padding: 0.9rem 0;
 }
 
-.site-navbar__brand {
-  color: white;
+.site-navbar .site-navbar__brand {
+  color: #ffffff !important;
   font-size: 1.4rem;
   font-weight: 700;
   text-decoration: none;
 }
 
-.site-navbar__brand:hover {
-  color: #f9fafb;
+.site-navbar .site-navbar__brand:hover,
+.site-navbar .site-navbar__brand:focus {
+  color: #f9fafb !important;
 }
 
-.site-navbar__link {
-  color: #e5e7eb;
-  font-weight: 500;
+.site-navbar .site-navbar__link {
+  color: #f3f4f6 !important;
+  font-weight: 600;
 }
 
-.site-navbar__link:hover {
-  color: white;
+.site-navbar .site-navbar__link:hover,
+.site-navbar .site-navbar__link:focus {
+  color: #ffffff !important;
 }
 
-.site-navbar__link.active {
-  color: white;
+.site-navbar .site-navbar__link.active {
+  color: #ffffff !important;
   font-weight: 700;
 }
 
 .site-navbar__welcome {
-  color: #d1d5db;
+  color: #e5e7eb;
   font-size: 0.95rem;
 }
 
 .site-navbar__toggler {
-  border-color: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .site-navbar .navbar-toggler-icon {

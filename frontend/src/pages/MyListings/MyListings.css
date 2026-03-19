@@ -1,0 +1,15 @@
+.mylistings-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mylistings-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.mylistings-page p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}

@@ -20,8 +20,10 @@
 .bookdetails__back {
   display: inline-block;
   margin-bottom: 1.25rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #5a3e2b;
+  padding: 2rem;
 }
 
 /* Main listing info card — white background with soft brown border */
@@ -53,7 +55,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  flex-wrap: wrap; /* Wraps on narrow screens */
+  flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
@@ -73,10 +75,10 @@
 }
 
 /* Colour-coded condition modifiers — must match BookCard.css */
-.bookdetails__condition--like-new { background: #d4edda; color: #155724; } /* Green  */
-.bookdetails__condition--good     { background: #cce5ff; color: #004085; } /* Blue   */
-.bookdetails__condition--fair     { background: #fff3cd; color: #856404; } /* Yellow */
-.bookdetails__condition--poor     { background: #f8d7da; color: #721c24; } /* Red    */
+.bookdetails__condition--like-new { background: #d4edda; color: #155724; }  
+.bookdetails__condition--good     { background: #cce5ff; color: #004085; }  
+.bookdetails__condition--fair     { background: #fff3cd; color: #856404; } 
+.bookdetails__condition--poor     { background: #f8d7da; color: #721c24; }  
 
 /* Average rating badge — gold star and score from reviews */
 .bookdetails__rating {
@@ -157,3 +159,9 @@
   font-size: 0.9rem;
   padding: 0;
 }
+
+.bookdetails__reviews {
+  padding: 2rem;
+}
+
+

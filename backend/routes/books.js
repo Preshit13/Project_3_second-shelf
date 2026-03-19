@@ -11,6 +11,7 @@ import {
   createBook,
   updateBook,
   deleteBook,
+  getBooksBySellerId,
 } from "../data/books.js";
 import { requireAuth } from "../middleware/auth.js";
 import { validateBook } from "../utils/validation.js";
@@ -26,6 +27,16 @@ const router = Router();
 router.get("/", async (req, res) => {
   const books = await getAllBooks();
   res.json(books);
+});
+
+router.get("/mine/listings", requireAuth, async (req, res) => {
+  try {
+    const books = await getBooksBySellerId(req.user.id);
+    res.json(books);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch your listings" });
+  }
 });
 
 /**

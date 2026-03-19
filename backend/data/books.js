@@ -28,6 +28,10 @@ export function getBookById(id) {
     .findOne({ _id: new ObjectId(id) });
 }
 
+export function getBooksBySellerId(sellerId) {
+  return getDb().collection(COL).find({ sellerId }).toArray();
+}
+
 /**
  * Inserts a new book listing into the database.
  * Automatically adds a createdAt timestamp.
