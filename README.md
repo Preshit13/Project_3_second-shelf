@@ -11,6 +11,7 @@ David Ahn, Alison Avery
 ## Demo
 
 ```
+.
 ├── LICENSE
 ├── README.md
 ├── backend
@@ -36,11 +37,11 @@ David Ahn, Alison Avery
 │   └── utils
 │       └── validation.js
 └── frontend
-    ├── README.md
     ├── dist
     │   ├── assets
-    │   │   ├── index-CUqkYXt-.js
-    │   │   └── index-DVf6Kqmn.css
+    │   │   ├── index-CftpmakW.css
+    │   │   ├── index-DX4XjONE.js
+    │   │   └── reviews-C0PYOVJ-.js
     │   ├── index.html
     │   └── vite.svg
     ├── eslint.config.js
@@ -68,6 +69,9 @@ David Ahn, Alison Avery
     │   │   ├── BookList
     │   │   │   ├── BookList.css
     │   │   │   └── BookList.jsx
+    │   │   ├── Footer
+    │   │   │   ├── Footer.css
+    │   │   │   └── Footer.jsx
     │   │   ├── Header
     │   │   │   ├── Header.css
     │   │   │   └── Header.jsx
@@ -92,6 +96,9 @@ David Ahn, Alison Avery
     │       ├── Login
     │       │   ├── Login.css
     │       │   └── Login.jsx
+    │       ├── MyListings
+    │       │   ├── MyListings.css
+    │       │   └── MyListings.jsx
     │       └── Register
     │           ├── Register.css
     │           └── Register.jsx
