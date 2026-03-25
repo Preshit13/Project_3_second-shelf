@@ -76,10 +76,14 @@ router.post("/login", (req, res, next) => {
         return next(loginError);
       }
 
-      return res.json({
-        message: "Login successful",
-        user,
-      });
+return res.status(200).json({
+  message: "Login successful",
+  user: {
+    id: user._id.toString(),
+    name: user.name,
+    email: user.email,
+  },
+});
     });
   })(req, res, next);
 });
