@@ -25,8 +25,13 @@ const router = Router();
  * Public - no authentication required
  */
 router.get("/", async (req, res) => {
-  const books = await getAllBooks();
-  res.json(books);
+  try {
+    const books = await getAllBooks();
+    res.status(200).json(books);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch books" });
+  }
 });
 
 router.get("/mine/listings", requireAuth, async (req, res) => {
